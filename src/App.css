@@ -1,3 +1,58 @@
 .App {
-  text-align: center;
+  height: 715px;
+  width: 1217px;
+
+  border: red 2px solid;
+}
+
+.header {
+  height: 5rem;
+  width: 100vw;
+  border: #a9a9a9 solid 1px;
+}
+
+.header img {
+  width: 220px;
+  height: 80px;
+  object-fit: contain;
+}
+
+.restaurant-presentation {
+  height: 260px;
+  width: 100 vw;
+  border: solid purple 1px;
+}
+
+h1 {
+  font-size: 32px;
+  margin-top: 50px;
+  color: #2e3333;
+  font-weight: bold;
+}
+
+.restaurant-presentation p {
+  font-size: 19px;
+  color: #868a8a;
+  line-height: 28px;
+  width: 750px;
+}
+
+.bottom-element {
+  display: flex;
+  align-items: center;
+}
+
+.bottom-element img {
+  width: 350px;
+  height: 200px;
+  border-radius: 5px;
+  margin-left: 50px;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+h3 {
+  font-size: 18px;
 }
