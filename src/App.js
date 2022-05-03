@@ -9,34 +9,16 @@ import Knife from "../src/img/knife.jpeg";
 function App() {
   const [data, setData] = useState();
   const [isLoading, setIsLoading] = useState(true);
+  const [addingMeals, setAddingMeals] = useState([]);
+
   // const [counter, setCounter] = useState([0]);
 
-  // const newCounter = () => {
-  //   const newCounter = [...counter]; //copie du TB
-  //   newCounter.push(0); // modification de la copie
-  //   setCounter(newCounter); //Mise à jour du state avec la copie
-  // };
-
-  // const handleClickMinus = (index) => {
-  //   const newCounter = [...counter];
-  //   newCounter[index]--;
-  //   setCounter(newCounter);
-  // };
-
-  // const handkeClickPlus = (index) => {
-  //   const newCounter = [...counter];
-  //   newCounter[index]++;
-  //   setCounter(newCounter);
-  // };
-
-  // const [addingMeals, setAddingMeals] = useState([]);
-
-  // const addNewMeal = (event) => {
-  //   event.preventDefault();
-  //   const newMeal = [...addingMeals];
-  //   newMeal.push(categories.meals);
-  //   setAddingMeals(newMeal);
-  // };
+  const basket = (event) => {
+    event.preventDefault();
+    const newMeal = [...addingMeals]; //copie du TB
+    newMeal.push(0); // modification de la copie
+    setAddingMeals(newMeal); //Mise à jour du state avec la copie
+  };
 
   useEffect(() => {
     const fetchData = async () => {
@@ -70,15 +52,17 @@ function App() {
             isArrayOfMealsEmpty > 0 && (
               <div className="name-category" key={index}>
                 <h2>{categories.name}</h2>
-                <div
-                  className="details"
-                  onClick={() => {
-                    alert("Cliqué");
-                  }}
-                >
+                <div className="details">
                   {categories.meals.map((meals, index) => {
                     return (
-                      <div className="image" key={index}>
+                      <div
+                        className="image"
+                        key={index}
+                        onClick={() => {
+                          console.log(meals.title);
+                          console.log(meals.price);
+                        }}
+                      >
                         <h3> {meals.title}</h3>
                         <p>{meals.description}</p>
                         <p>{meals.price}</p>
@@ -90,6 +74,8 @@ function App() {
                             <img src={Knife} />
                           )}
                         </div>
+
+                        <div className="basket"></div>
                       </div>
                     );
                   })}
