@@ -1,14 +1,13 @@
 .App {
-  height: 715px;
+  height: 100 vh;
   width: 1217px;
 
-  border: red 2px solid;
+  margin: 0 auto;
 }
 
 .header {
   height: 5rem;
   width: 100vw;
-  border: #a9a9a9 solid 1px;
 }
 
 .header img {
@@ -20,7 +19,6 @@
 .restaurant-presentation {
   height: 260px;
   width: 100 vw;
-  border: solid purple 1px;
 }
 
 h1 {
@@ -34,12 +32,13 @@ h1 {
   font-size: 19px;
   color: #868a8a;
   line-height: 28px;
-  width: 750px;
+  width: 1355px;
 }
 
 .bottom-element {
   display: flex;
   align-items: center;
+  justify-content: space-around;
 }
 
 .bottom-element img {
@@ -49,10 +48,49 @@ h1 {
   margin-left: 50px;
 }
 
+.details {
+  border: black solid 2px;
+
+  display: grid;
+  grid-template-columns: 400px 400px;
+}
+
+.details > div {
+  flex: 1;
+}
+
+.image {
+  height: 160px;
+  width: 4éàpx;
+
+  margin-left: 15px;
+}
+
+.name-category h2 {
+  margin-bottom: 25px;
+  display: flex;
+}
+
+.categories {
+  height: 230px;
+  width: 850px;
+}
+
 h2 {
   font-size: 24px;
 }
 
 h3 {
   font-size: 18px;
+}
+
+.image img {
+  width: 130px;
+  height: 130px;
+  object-fit: cover;
+}
+
+.image span {
+  font-weight: bold;
+  color: orangered;
 }
